@@ -1,0 +1,29 @@
+[project]
+name = "pinwheel-scheduling"
+version = "1.0.0"
+description = "Tools for constructing pinwheel schedules and proving packing bounds."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [
+    { name = "Hiroshi Fujiwara", email = "fujiwara@shinshu-u.ac.jp" },
+    { name = "Grzegorz Gutowski", email = "grzegorz.gutowski@uj.edu.pl" },
+    { name = "Katsuhisa Ouchi", email = "k_ouchi@shinshu-u.ac.jp" },
+    { name = "Alexander Wolff", email = "alexander.wolff@uni-wuerzburg.de" },
+]
+dependencies = [
+    "pysmt",
+    "z3-solver",
+]
+
+[project.scripts]
+cpp-build = "scripts.cpp_build:main"
+check-proofs = "scripts.check_proofs:main"
+
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["pinwheel_scheduling_packing_prover"]
+packages = ["scripts"]
