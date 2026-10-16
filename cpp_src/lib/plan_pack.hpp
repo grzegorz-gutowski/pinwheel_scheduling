@@ -11,10 +11,10 @@ template <typename T>
 class PlanPack
 {
 public:
-    typedef Schedule<T> Schedule;
+    using Schedule = ::Schedule<T>;
     typedef Schedule::Job Job;
     typedef Schedule::UpperBound UpperBound;
-    typedef Point<Fraction> Point;
+    using Point = ::Point<Fraction>;
 
     static const PlanPack& equal_plan(size_t dimension)
     {

@@ -15,8 +15,8 @@ template<typename T>
 class Schedule {
 public:
     typedef T Job;
-    typedef UpperBound<Fraction> UpperBound;
-    typedef LowerBound<Fraction> LowerBound;
+    using UpperBound = ::UpperBound<Fraction>;
+    using LowerBound = ::LowerBound<Fraction>;
 private:
     size_t dimension;
     std::vector<Job> tasks;
