@@ -7,9 +7,8 @@ import subprocess
 import sys
 
 def main() -> int:
-    root = Path(__file__).resolve().parent.parent
-    build = root / "cpp_build"
-    source = root / "cpp_src"
+    build = "cpp_build"
+    source = "cpp_src"
     try:
         subprocess.run(
             ["cmake", "-S", str(source), "-B", str(build), "-DCMAKE_BUILD_TYPE=Release"],
