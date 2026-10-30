@@ -18,7 +18,8 @@ dependencies = [
 
 [project.scripts]
 cpp-build = "scripts.cpp_build:main"
-check-proofs = "scripts.check_proofs:main"
+check-proofs-5-6 = "scripts.check_proofs_5_6:main"
+check-proofs-17-20 = "scripts.check_proofs_17_20:main"
 
 [build-system]
 requires = ["setuptools>=77"]
